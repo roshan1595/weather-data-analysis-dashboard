@@ -9,12 +9,12 @@ import altair as alt
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
 # reading csv files
-Delhi = pd.read_csv('D:\python\Project 3\delhi.csv', parse_dates=['time'])
+Delhi = pd.read_csv('delhi.csv', parse_dates=['time'])
 kuala_lumpur = pd.read_csv(
-    'D:\python\Project 3\kuala_lumpur.csv', parse_dates=['time'])
+    'kuala_lumpur.csv', parse_dates=['time'])
 Singapore = pd.read_csv(
-    'D:\python\Project 3\singapore.csv', parse_dates=['time'])
-Tokyo = pd.read_csv('D:\python\Project 3\Tokyo.csv', parse_dates=['time'])
+    'singapore.csv', parse_dates=['time'])
+Tokyo = pd.read_csv('Tokyo.csv', parse_dates=['time'])
 
 # defining function
 def rt_chart(City):
