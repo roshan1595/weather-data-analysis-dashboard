@@ -65,8 +65,8 @@ def rt_chart(City):
         with tab1:
             st.dataframe(City[City['year'] == Year])
         with tab2:
-            temp_chart = alt.Chart(City[City['year'] == Year]).mark_rect().encode(x='date:O', y='month:O', color=alt.Color('avg_temp:Q', scale=alt.Scale(scheme="inferno")), tooltip=[
-                alt.Tooltip('date:O', title="Date"), alt.Tooltip('avg_temp:Q', title='Average Temperature in °C')]).properties(height=450, width=750)
+            temp_chart = alt.Chart(City[City['year'] == Year]).mark_rect().encode(x='date:O', y='month:O', color=alt.Color('avg_temp', scale=alt.Scale(scheme="inferno")), tooltip=[
+                alt.Tooltip('date', title="Date"), alt.Tooltip('avg_temp', title='Average Temperature in °C')]).properties(height=450, width=750)
             st.altair_chart(temp_chart)
 
     with col2:
